@@ -13,7 +13,7 @@ COPY go.* ./
 
 # Download all the dependencies
 #RUN go mod download
-go mod tidy && go mod vendor
+RUN go mod tidy && go mod vendor
 
 # Copy the source code to the working directory
 COPY . .
