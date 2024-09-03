@@ -12,9 +12,9 @@ WORKDIR /app
 COPY go.* ./
 
 # Download all the dependencies
-#RUN go mod download
-RUN go mod tidy 
-RUN go mod vendor
+RUN go mod download
+#RUN go mod tidy 
+#RUN go mod vendor
 
 # Copy the source code to the working directory
 COPY . .
